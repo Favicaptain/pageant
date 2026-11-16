@@ -34,11 +34,11 @@
       <span></span><span></span><span></span>
     </button>
 
-     <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+    <nav class="primary-nav" id="primaryNav" aria-label="Primary">
       <ul>
         <li><a class="nav-link" href="index.html">Home</a></li>
         <li><a class="nav-link" href="partners.html">Partners</a></li>
-        <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li><a class="nav-link" href="gallery.html" aria-current="page">Gallery</a></li>
         <li><a class="nav-link" href="index.html#contact">Contact</a></li>
       </ul>
       <a class="btn btn-gold nav-cta" href="index.html#register">Register Now</a>
@@ -76,105 +76,38 @@
 
       <div class="gallery-grid reveal" id="galleryGrid">
 
-        <figure class="gallery-item is-wide" data-category="pageant"
-                tabindex="0" role="button" aria-label="View: Grand Finale Stage">
-          <img src="assets/img/gallery/gallery-01.jpg"
-               alt="Grand Finale stage with golden lights and audience"
-               width="1200" height="800" loading="lazy" decoding="async">
-          <figcaption>Grand Finale Stage</figcaption>
-        </figure>
+        <!--
+          ─────────────────────────────────────────────────────────────
+          HOW TO ADD A GALLERY IMAGE
+          ─────────────────────────────────────────────────────────────
+          Copy the block below and paste it inside #galleryGrid.
+          Replace every "[…]" with your content.
 
-        <figure class="gallery-item" data-category="pageant"
-                tabindex="0" role="button" aria-label="View: Crowning Moment">
-          <img src="assets/img/gallery/gallery-02.jpg"
-               alt="The crowning moment of Face of Diaspora Global"
-               width="800" height="1000" loading="lazy" decoding="async">
-          <figcaption>Crowning Moment</figcaption>
-        </figure>
+          Categories you can use for data-category:
+            pageant · awards · bootcamp · events · behind
 
-        <figure class="gallery-item" data-category="awards"
-                tabindex="0" role="button" aria-label="View: Award Night Gala">
-          <img src="assets/img/gallery/gallery-03.jpg"
-               alt="Award night gala with honoured guests"
-               width="800" height="1000" loading="lazy" decoding="async">
-          <figcaption>Award Night Gala</figcaption>
-        </figure>
+          Add class "is-wide" on the figure for a full-width hero image
+          (best for landscape shots ~1200×800). Default tiles are
+          portrait-friendly (4:5).
 
-        <figure class="gallery-item" data-category="awards"
-                tabindex="0" role="button" aria-label="View: Signature Trophy">
-          <img src="assets/img/gallery/gallery-04.jpg"
-               alt="The signature Face of Diaspora Global award trophy"
-               width="800" height="1000" loading="lazy" decoding="async">
-          <figcaption>Signature Trophy</figcaption>
-        </figure>
+          <figure class="gallery-item" data-category="pageant"
+                  tabindex="0" role="button" aria-label="View: [Image Title]">
+            <img src="assets/img/gallery/[filename].jpg"
+                 alt="[Description of the image]"
+                 width="800" height="1000" loading="lazy" decoding="async">
+            <figcaption>[Image Title]</figcaption>
+          </figure>
 
-        <figure class="gallery-item" data-category="bootcamp"
-                tabindex="0" role="button" aria-label="View: Catwalk Training">
-          <img src="assets/img/gallery/gallery-05.jpg"
-               alt="Contestants in catwalk training during bootcamp"
-               width="800" height="1000" loading="lazy" decoding="async">
-          <figcaption>Catwalk Training</figcaption>
-        </figure>
-
-        <figure class="gallery-item" data-category="bootcamp"
-                tabindex="0" role="button" aria-label="View: Cultural Day">
-          <img src="assets/img/gallery/gallery-06.jpg"
-               alt="Cultural day during the 7-day bootcamp"
-               width="800" height="1000" loading="lazy" decoding="async">
-          <figcaption>Cultural Day</figcaption>
-        </figure>
-
-        <figure class="gallery-item" data-category="events"
-                tabindex="0" role="button" aria-label="View: Press Conference">
-          <img src="assets/img/gallery/gallery-07.jpg"
-               alt="Press conference with media partners"
-               width="800" height="1000" loading="lazy" decoding="async">
-          <figcaption>Press Conference</figcaption>
-        </figure>
-
-        <figure class="gallery-item" data-category="events"
-                tabindex="0" role="button" aria-label="View: Meet the Contestants">
-          <img src="assets/img/gallery/gallery-08.jpg"
-               alt="Meet the contestants media event"
-               width="800" height="1000" loading="lazy" decoding="async">
-          <figcaption>Meet the Contestants</figcaption>
-        </figure>
-
-        <figure class="gallery-item" data-category="behind"
-                tabindex="0" role="button" aria-label="View: Backstage Preparation">
-          <img src="assets/img/gallery/gallery-09.jpg"
-               alt="Backstage preparation before the show"
-               width="800" height="1000" loading="lazy" decoding="async">
-          <figcaption>Backstage Preparation</figcaption>
-        </figure>
-
-        <figure class="gallery-item" data-category="behind"
-                tabindex="0" role="button" aria-label="View: Photo Session">
-          <img src="assets/img/gallery/gallery-10.jpg"
-               alt="Contestants during an editorial photo session"
-               width="800" height="1000" loading="lazy" decoding="async">
-          <figcaption>Photo Session</figcaption>
-        </figure>
-
-        <figure class="gallery-item" data-category="pageant"
-                tabindex="0" role="button" aria-label="View: Evening Gown Segment">
-          <img src="assets/img/gallery/gallery-11.jpg"
-               alt="Contestants in the evening gown segment"
-               width="800" height="1000" loading="lazy" decoding="async">
-          <figcaption>Evening Gown Segment</figcaption>
-        </figure>
-
-        <figure class="gallery-item" data-category="events"
-                tabindex="0" role="button" aria-label="View: Charity Visit">
-          <img src="assets/img/gallery/gallery-12.jpg"
-               alt="Charity visit — Education for the Girl Child initiative"
-               width="800" height="1000" loading="lazy" decoding="async">
-          <figcaption>Charity Visit</figcaption>
-        </figure>
+          To make the tile full-width: add " is-wide" after "gallery-item".
+          ─────────────────────────────────────────────────────────────
+        -->
 
       </div>
 
-      <p class="gallery-empty" id="galleryEmpty" hidden>No images in this category yet.</p>
+      <p class="gallery-empty" id="galleryEmpty">
+        New memories are on the way — photos from the unveiling, bootcamp and grand finale
+        will appear here soon.
+      </p>
     </div>
   </section>
 
@@ -208,6 +141,7 @@
         <ul>
           <li><a href="index.html#about">About the Platform</a></li>
           <li><a href="index.html#director">Project Director</a></li>
+          <li><a href="index.html#unveiling">The Unveiling</a></li>
           <li><a href="index.html#pageant">Pageant 2027</a></li>
           <li><a href="index.html#prizes">Prize Package</a></li>
           <li><a href="index.html#experience">Bootcamp</a></li>
@@ -218,7 +152,6 @@
       <div class="footer-col">
         <h4>Participate</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
           <li><a href="index.html#register">Register to Compete</a></li>
           <li><a href="partners.html">Partnerships</a></li>
           <li><a href="gallery.html">Gallery</a></li>
