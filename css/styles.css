@@ -866,6 +866,118 @@ h1,h2,h3,h4{
 }
 
 /* ============================================================
+   8e. UNVEILING FEATURE
+   ============================================================ */
+.unveil-feature{
+  display:grid;
+  gap:2.25rem;
+  align-items:center;
+}
+
+.unveil-feature__visual{
+  position:relative;
+  display:flex;
+  justify-content:center;
+}
+
+/* Gold halo behind the poster */
+.unveil-feature__visual::before{
+  content:"";
+  position:absolute;
+  inset:-8%;
+  border-radius:50%;
+  background:radial-gradient(circle,
+    rgba(223,177,91,.20) 0%,
+    rgba(255,215,0,.06) 45%,
+    transparent 68%);
+  filter:blur(18px);
+  z-index:0;
+  pointer-events:none;
+}
+
+.unveil-feature__visual img{
+  position:relative;
+  z-index:1;
+  width:100%;
+  max-width:480px;
+  height:auto;
+  border-radius:var(--radius-lg);
+  border:1.5px solid var(--gold-primary);
+  box-shadow:
+    0 0 28px rgba(223,177,91,.25),
+    var(--shadow-card-lg);
+}
+
+.unveil-feature__copy .section-title{margin-bottom:.85rem}
+
+/* Event detail rows */
+.unveil-details{
+  display:grid;
+  gap:.85rem;
+  margin:1.5rem 0 1.75rem;
+}
+
+.unveil-detail{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  padding:.9rem 1.1rem;
+  background:var(--bg-card);
+  border:1.5px solid var(--border-soft);
+  border-radius:10px;
+  transition:border-color var(--transition), background var(--transition);
+}
+
+.unveil-detail:hover{
+  border-color:var(--border-gold);
+  background:var(--bg-elevated);
+}
+
+.unveil-detail__icon{
+  flex:none;
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  border-radius:10px;
+  background:linear-gradient(140deg, rgba(223,177,91,.24), rgba(223,177,91,.06));
+  border:1px solid var(--border-gold);
+  color:var(--gold-bright);
+}
+
+.unveil-detail__icon svg{width:20px;height:20px}
+
+.unveil-detail b{
+  display:block;
+  font-size:.68rem;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  color:var(--gold-primary);
+  font-weight:800;
+  margin-bottom:.2rem;
+}
+
+.unveil-detail span{
+  font-size:.92rem;
+  color:var(--text-white);
+  font-weight:600;
+  line-height:1.4;
+}
+
+@media (min-width:640px){
+  .unveil-details{grid-template-columns:repeat(2,1fr)}
+  .unveil-detail--wide{grid-column:1 / -1}
+}
+
+@media (min-width:900px){
+  .unveil-feature{
+    grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);
+    gap:3rem;
+  }
+  .unveil-feature__visual img{max-width:520px}
+}
+
+/* ============================================================
    9. TIMELINE & PILLS
    ============================================================ */
 .split{display:grid;gap:1.6rem;grid-template-columns:1fr}
